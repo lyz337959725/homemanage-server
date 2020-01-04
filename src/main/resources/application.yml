@@ -1,0 +1,15 @@
+server:
+  port: 8085
+
+spring:
+  datasource:
+    url: jdbc:mysql://39.106.53.194:3306/home
+    username: root
+    password: 901123
+  jpa:
+    show_sql: true
+
+jwt:
+  config:
+    key: thisisahomemanagerbyliuyouzhihoumiandoushichoushude
+    ttl: 36000000
