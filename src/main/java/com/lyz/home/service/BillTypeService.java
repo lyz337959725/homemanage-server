@@ -16,7 +16,7 @@ public class BillTypeService {
     private BillTypeRepository billTypeRepository;
 
     public List<BillType> getAllTypes(){
-        return (List<BillType>) billTypeRepository.findAll();
+        return billTypeRepository.findAllByOrderBySortAsc();
     }
 
     public BillType addOrUpdateBillType(BillType type){

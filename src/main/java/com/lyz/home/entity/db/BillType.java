@@ -25,6 +25,9 @@ public class BillType extends BaseEntity {
     private String name;
 
     @Column
+    private int sort;
+
+    @Column
     private String creator;
 
     @Transient

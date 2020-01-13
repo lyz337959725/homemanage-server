@@ -13,6 +13,7 @@ CREATE TABLE `bill_type` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `parent_id` int(11) NOT NULL DEFAULT  -1,
   `name` varchar(50) NOT NULL,
+  `sort` int(11) not null default 0,
   `creator` varchar(20) NOT NULL,
   `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `update_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
