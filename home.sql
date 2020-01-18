@@ -14,6 +14,7 @@ CREATE TABLE `bill_type` (
   `parent_id` int(11) NOT NULL DEFAULT  -1,
   `name` varchar(50) NOT NULL,
   `sort` int(11) not null default 0,
+  `type` tinyint(1) not null default 0,
   `creator` varchar(20) NOT NULL,
   `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `update_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,

@@ -18,9 +18,9 @@ public class BillTypeController {
     @Autowired
     private BillTypeService billTypeService;
 
-    @GetMapping
-    public RespEntity getAllType(){
-        List<BillType> list = billTypeService.getAllTypes();
+    @GetMapping(value = {"/{type}",""})
+    public RespEntity getAllType(@PathVariable(value = "type",required = false) Integer i){
+        List<BillType> list = billTypeService.getAllTypes(i);
         list.forEach(billType -> {
             if (billType.getParentId() != -1){
                 list.forEach(type -> {

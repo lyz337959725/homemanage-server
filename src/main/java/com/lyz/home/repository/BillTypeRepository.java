@@ -13,5 +13,7 @@ public interface BillTypeRepository extends CrudRepository<BillType,Integer> {
     @Transactional
     void deleteByIdIn(int[] ids);
 
+    List<BillType> findAllByTypeOrderBySortAsc(boolean type);
+
     List<BillType> findAllByOrderBySortAsc();
 }

@@ -28,6 +28,9 @@ public class BillType extends BaseEntity {
     private int sort;
 
     @Column
+    private boolean type;
+
+    @Column
     private String creator;
 
     @Transient

@@ -15,8 +15,12 @@ public class BillTypeService {
     @Autowired
     private BillTypeRepository billTypeRepository;
 
-    public List<BillType> getAllTypes(){
-        return billTypeRepository.findAllByOrderBySortAsc();
+    public List<BillType> getAllTypes(Integer i){
+        if(i != null){
+            return billTypeRepository.findAllByTypeOrderBySortAsc(i == 1);
+        }else{
+            return billTypeRepository.findAllByOrderBySortAsc();
+        }
     }
 
     public BillType addOrUpdateBillType(BillType type){
