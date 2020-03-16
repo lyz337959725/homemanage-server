@@ -14,6 +14,10 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
+    public User getUserByOpenid(String openid){
+        return userRepository.findByOpenid(openid);
+    }
+
     public List<User> getAllUsers(){
         return userRepository.findAll();
     }

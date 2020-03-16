@@ -14,6 +14,17 @@ configurations {
 	}
 }
 
+jar {
+	manifestContentCharset 'utf-8'
+	metadataCharset 'utf-8'
+	manifest {
+		attributes "Main-Class": "cn.buddie.GradleTest"
+	}
+	from {
+		configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+	}
+}
+
 repositories {
 	mavenCentral()
 }

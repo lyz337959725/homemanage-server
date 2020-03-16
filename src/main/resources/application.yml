@@ -15,4 +15,7 @@ jwt:
   config:
     key: thisisahomemanagerbyliuyouzhihoumiandoushichoushude
     ttl: 36000000
+wx:
+  appid: wxab7361223e9958b1
+  secret: bfc77850e03f1be415890e16970634e3
 

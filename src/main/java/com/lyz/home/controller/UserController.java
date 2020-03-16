@@ -24,6 +24,12 @@ public class UserController {
         return ResposeUtil.successWithData("",list);
     }
 
+    @GetMapping("/{openid}")
+    public RespEntity getUserByOpenid(@PathVariable("openid") String openid){
+        User user = userService.getUserByOpenid(openid);
+        return ResposeUtil.successWithData("",user);
+    }
+
     @PostMapping()
     public RespEntity addUser(@RequestBody User addUser){
         addUser.setPassword(DigestUtils.md5DigestAsHex(addUser.getPassword().getBytes()).toUpperCase());
